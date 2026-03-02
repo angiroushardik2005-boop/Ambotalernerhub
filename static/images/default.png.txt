@@ -1,0 +1,3 @@
+# This is a placeholder file
+# In production, add a default.png image file here
+# You can use any image editor to create a 200x200 default avatar
