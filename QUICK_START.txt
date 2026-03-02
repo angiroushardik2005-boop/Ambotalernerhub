@@ -1,0 +1,212 @@
+═══════════════════════════════════════════════════════════════
+    🎓 AMBOTA LEARNERS HUB - QUICK START GUIDE
+═══════════════════════════════════════════════════════════════
+
+Welcome to Ambota Learners Hub - A modern student portal for
+sharing and accessing study materials!
+
+═══════════════════════════════════════════════════════════════
+🚀 QUICK START (3 STEPS)
+═══════════════════════════════════════════════════════════════
+
+STEP 1: Install Dependencies
+-----------------------------
+cd ambota-learners-hub
+pip install -r requirements.txt
+
+STEP 2: Run the Application
+----------------------------
+python app.py
+
+STEP 3: Open Browser
+---------------------
+http://localhost:5000
+
+That's it! You're ready to go! 🎉
+
+═══════════════════════════════════════════════════════════════
+✨ FEATURES
+═══════════════════════════════════════════════════════════════
+
+Authentication:
+---------------
+✅ Student registration with email & roll number
+✅ Secure password hashing
+✅ Session-based login
+✅ Profile photo upload
+✅ Edit profile functionality
+
+Materials:
+----------
+✅ Upload study materials (PDF, DOC, PPT, ZIP)
+✅ Add cover images to materials
+✅ Branch-wise organization (4 branches)
+✅ Search & filter materials
+✅ Sort by date, title, or uploader
+✅ Edit/delete your uploads
+✅ Download files
+
+User Interface:
+---------------
+✅ Top navbar with user info
+✅ Left sidebar with profile & navigation
+✅ 4 colorful branch circles on home
+✅ E-commerce style material cards
+✅ Floating "+" upload button
+✅ Dashboard with statistics
+✅ Fully responsive design
+
+═══════════════════════════════════════════════════════════════
+📊 SYSTEM REQUIREMENTS
+═══════════════════════════════════════════════════════════════
+
+✅ Python 3.8 or higher
+✅ 100MB free disk space
+✅ Modern web browser
+✅ Internet connection (for Bootstrap CDN)
+
+═══════════════════════════════════════════════════════════════
+🎯 FIRST TIME USAGE
+═══════════════════════════════════════════════════════════════
+
+1. CREATE ACCOUNT
+   --------------
+   • Open http://localhost:5000
+   • Click "Register here"
+   • Fill in your details:
+     - Full Name
+     - Email Address
+     - Roll Number (must be unique)
+     - Branch (Computer/Civil/Architecture/Electronics)
+     - Profile Photo (optional)
+     - Password (min 6 characters)
+   • Click "Register"
+
+2. LOGIN
+   ------
+   • Enter email and password
+   • Click "Login"
+
+3. EXPLORE
+   --------
+   • Home: See 4 branch circles
+   • Click a branch to view materials
+   • Click "+" to upload materials
+   • Use sidebar to navigate
+
+═══════════════════════════════════════════════════════════════
+📁 PROJECT STRUCTURE
+═══════════════════════════════════════════════════════════════
+
+ambota-learners-hub/
+├── app.py                    # Main application
+├── models.py                 # Database models
+├── requirements.txt          # Dependencies
+├── routes/                   # URL routes
+│   ├── auth.py              # Login/Register
+│   ├── main.py              # Home/Browse
+│   └── uploads.py           # Upload management
+├── templates/               # HTML pages
+│   ├── base.html           # Master layout
+│   ├── auth/               # Auth pages
+│   └── main/               # Main pages
+├── static/                  # CSS, JS, Files
+│   ├── css/style.css       # Styling
+│   ├── js/script.js        # JavaScript
+│   ├── uploads/            # Uploaded files
+│   └── images/             # Profile photos
+└── instance/                # Database
+    └── ambota_learners_hub.db
+
+═══════════════════════════════════════════════════════════════
+🎨 CUSTOMIZATION
+═══════════════════════════════════════════════════════════════
+
+Change Site Name:
+-----------------
+Edit templates/base.html, line 16:
+<a class="navbar-brand" href="/">Your Name Here</a>
+
+Add Branches:
+-------------
+Edit routes/main.py, BRANCHES dictionary:
+BRANCHES = {
+    'Mechanical': {'color': '#607d8b', 'icon': '⚙️'},
+}
+
+Change Colors:
+--------------
+Edit static/css/style.css, lines 2-8:
+:root {
+    --primary-color: #3498db;  /* Your color */
+}
+
+═══════════════════════════════════════════════════════════════
+🔧 TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════
+
+Problem: ModuleNotFoundError
+Solution: pip install -r requirements.txt
+
+Problem: Database locked
+Solution: Close other instances or delete database:
+          rm instance/ambota_learners_hub.db
+
+Problem: Port 5000 in use
+Solution: Change port in app.py, last line:
+          app.run(debug=True, port=5001)
+
+Problem: Can't upload files
+Solution: Check file size (<16MB)
+          Verify file type is allowed
+
+═══════════════════════════════════════════════════════════════
+📚 BRANCHES
+═══════════════════════════════════════════════════════════════
+
+💻 Computer Engineering     (Blue)
+🏗️ Civil Engineering        (Brown)
+📐 Architecture              (Orange)
+⚡ Electronics Engineering   (Red)
+
+═══════════════════════════════════════════════════════════════
+🔒 SECURITY
+═══════════════════════════════════════════════════════════════
+
+✅ Passwords are hashed (not stored in plain text)
+✅ Session-based authentication
+✅ Protected routes (login required)
+✅ Secure file uploads
+✅ SQL injection protection
+✅ XSS protection
+
+═══════════════════════════════════════════════════════════════
+📞 SUPPORT
+═══════════════════════════════════════════════════════════════
+
+For help:
+1. Read README.md
+2. Check error messages
+3. Review code comments
+4. Run in debug mode
+
+═══════════════════════════════════════════════════════════════
+🎉 YOU'RE READY!
+═══════════════════════════════════════════════════════════════
+
+Your Ambota Learners Hub is ready to use!
+
+Next Steps:
+-----------
+1. Register your first account
+2. Upload a test material
+3. Explore all features
+4. Customize as needed
+5. Enjoy! 🚀
+
+═══════════════════════════════════════════════════════════════
+
+Built with ❤️ using Flask and Bootstrap
+Made for students, by developers who care!
+
+═══════════════════════════════════════════════════════════════
